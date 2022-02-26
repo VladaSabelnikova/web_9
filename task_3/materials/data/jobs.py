@@ -47,7 +47,7 @@ class Jobs(SqlAlchemyBase):
         sqlalchemy.Boolean
     )
 
-    team_leader = user_id = sqlalchemy.Column(
+    team_leader = sqlalchemy.Column(
         sqlalchemy.Integer,
         sqlalchemy.ForeignKey("users.id")
     )
