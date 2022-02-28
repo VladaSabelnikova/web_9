@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Works log</h1>
+{%for elem in jobs%}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Описание</th>
+            <th scope="col">Тимлид</th>
+            <th scope="col">Часы</th>
+            <th scope="col">Сотрудники</th>
+            <th scope="col">Закончилась ли</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"></th>
+            <td>{{elem.job}}</td>
+            <td>{{elem.team_leader}}</td>
+            <td>{{elem.work_size}} hours</td>
+            <td>{{elem.collaborators}}</td>
+            <td>{{elem.is_finished}}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endfor %}
+{% endblock %}
